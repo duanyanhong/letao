@@ -131,3 +131,7 @@ a:active {
   text-align: center;
   vertical-align: middle;
 }
+
+.mt {
+  margin-bottom: 20px;
+}

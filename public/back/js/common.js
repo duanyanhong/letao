@@ -5,6 +5,7 @@
 $(function () {
 
   NProgress.configure({ showSpinner: false });
+
   $(document).ajaxStart(function () {
     NProgress.start();
   });

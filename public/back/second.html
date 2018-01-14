@@ -126,7 +126,7 @@
               <span class="dropdown-text">请选择一级分类</span>
               <span class="caret"></span>
             </button>
-            <input type="hidden" name="categoryId">
+            <input type="hidden"  id="categoryId" name="categoryId" >
             <ul class="dropdown-menu">
               <!--再挖个坑-->
 
@@ -139,13 +139,14 @@
           <div class="form-group">
             <div class="fileupload_box">
               <button class="btn btn-default">上传图片</button>
-              <input type="file" class="btn  btn-default" id="fileupload" name="pic1"  >
+              <input type="file" class="btn  btn-default" id="fileupload" name="pic1" data-url="/category/addSecondCategoryPic"  >
             </div>
           </div>
           <div class="form-group box-img">
 
             <img src="images/none.png" alt="" width="100" height="100">
-            <input type="hidden" name="brandLogo">
+            <input type="hidden" name="brandLogo" id="brandLogo">
+            <input type="hidden" name="hot" value="1">
           </div>
 
         <div class="modal-footer">
@@ -172,9 +173,12 @@
 </script>
 
 <script type="text/html" id="menuTpl">
-  
+  {{ each rows v i }}
+
+  <li><a href="#" data-id="{{v.id}}">{{v.categoryName}}</a></li>
 
 
+   {{ /each }}
 </script>
 
 <script src="lib/jquery/jquery.js"></script>
